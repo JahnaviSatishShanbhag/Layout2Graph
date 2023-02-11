@@ -18,20 +18,20 @@ trainer:
   scheduler:
     scheduler_type: stairs
     warmup_epochs: 1
-  save_dir: doclaynet/
-  tensorboard_dir: doclaynet/tensorboard/
+  save_dir: /kaggle/working/output
+  tensorboard_dir: /kaggle/working/output/tensorboard
 datasets:
   train:
     dataset:
       data_root:
-        - /open-dataset/OD-layout/DocLayNet_core
+        - /kaggle/input/doclaynet/PNG
       label_root:
-        - /open-dataset/OD-layout/DocLayNet_core_graph_labels/train
+        - /kaggle/input/doclaynet/COCO
     collate_fn:
       aug_flag: false
   eval:
     dataset:
       data_root:
-        - /open-dataset/OD-layout/DocLayNet_core
+        - /kaggle/input/doclaynet/PNG
       label_root:
-        - /open-dataset/OD-layout/DocLayNet_core_graph_labels/val
+        - /kaggle/input/doclaynet/COCO
